@@ -12,6 +12,10 @@ export class AppController {
 
   @Get('health')
   getHealth() {
-    return { status: 'ok', timestamp: new Date().toISOString() };
+    return {
+      status: 'ok',
+      service: 'taskflow-api',
+      timestamp: new Date().toISOString(),
+    };
   }
 }
