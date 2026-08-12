@@ -14,6 +14,7 @@ export class AppController {
   getHealth() {
     return {
       status: 'ok',
+      uptime: process.uptime(),
       service: 'taskflow-api',
       timestamp: new Date().toISOString(),
     };
